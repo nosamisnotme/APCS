@@ -18,18 +18,14 @@ public class Game {
     //Allows a player to take a specific amount of pieces.
     //Adds the amount of pieces taken to the user's score.
     public int takePiece(){
-        System.out.println("There are "+ pieces+" remaining!");
-        int take = 0;
-       //TO DO: Grab the user amount of pieces and repeat if it not allowed.
+        System.out.println("There are "+ pieces +" remaining!");
+        int take = 100;
         while (!isLegal(take)){
             take = sc.nextInt();
-            if (!isLegal(take)){
-                System.out.println("That's not a legal number!");
-            }
-
         }
+        currentPlayer.adjustScore(take);
         pieces -= take;
-        System.out.println("There are "+ pieces+" remaining!");
+        System.out.println("There are "+ pieces +" remaining!");
         System.out.println("-----------------------");
         return take;
     }
@@ -38,18 +34,23 @@ public class Game {
     //**TO DO**//
     public Player getNextPlayer(){
     //Changes which players turn it is and returns the current player.
-        int player = 1;
-    
-
+        if (currentPlayer == p1){
+            currentPlayer = p2;
+        }
+        else {
+            currentPlayer = p1;
+        }
         return currentPlayer;
     }
 
     //Checks whether or not the user's requested move is allowed or not.
     public boolean isLegal(int x){
-
-        //TO DO
-
-        return false;// Change appropriately
+        if (((x <= (pieces/2))&&(x >= 0))||(x == 1)){
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
 

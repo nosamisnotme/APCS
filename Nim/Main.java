@@ -4,14 +4,12 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         //Asks the user to input thier name for the player
-        System.out.println("What is player1's name?: ");
-        //TO DO: Create Player 1
-        String p1 = sc.nextLine();
-        Player p1 = new Player(p1);
+        System.out.println("What is player 1's name?: ");
+        Player p1 = new Player(sc.nextLine());
 
         //Asks the user to input their name for the player.
-        System.out.println("What is player2's name?: ");
-        //TO DO: Create Player 2
+        System.out.println("What is player 2's name?: ");
+        Player p2 = new Player(sc.nextLine());
 
         String again = "Literally any string";
         Player currentPlayer;
@@ -19,17 +17,22 @@ public class Main {
         //Runs the game
         while (!again.equals("q")){
             //Generates the game
-            //TO DO: Create "game"
+            Game game = new Game(p1, p2);
 
-            //TO DO: Set the a random player as the current player
-            
+            //Set the a random player as the current player
+            if (Math.random()>= .5){
+                currentPlayer = p1;
+            }
+            else {
+                currentPlayer = p2;
+            }
 
             game.setFirstPlayer(currentPlayer);
             //This is the loop in which the game will be played
             while(!game.isComplete()){
-               //TO DO
-
-               currentPlayer = game.getNextPlayer();
+                //TO DO
+                game.takePiece();
+                currentPlayer = game.getNextPlayer();
             }
             System.out.println(currentPlayer.getName()+ " Won!!");
             System.out.println(p1.getName() +" had removed "+ p1.getScore()+" pieces!");
