@@ -6,6 +6,8 @@ public class Main {
         //Asks the user to input thier name for the player
         System.out.println("What is player1's name?: ");
         //TO DO: Create Player 1
+        String p1 = sc.nextLine();
+        Player p1 = new Player(p1);
 
         //Asks the user to input their name for the player.
         System.out.println("What is player2's name?: ");

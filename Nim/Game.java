@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 public class Game {
     private int pieces;
@@ -38,7 +39,7 @@ public class Game {
     public Player getNextPlayer(){
     //Changes which players turn it is and returns the current player.
         int player = 1;
-        
+    
 
         return currentPlayer;
     }
