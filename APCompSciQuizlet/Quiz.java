@@ -1,6 +1,22 @@
 package APCompSciQuizlet;
 
 import java.util.*;
+/*
+ * ArrayList Cheat Sheet
+ * 
+ * ArrayList<dataType> ArrayListName = new ArrayList<dataType>(); (Constructs a new ArrayList with the specified datatype and the given name.)
+ * 
+ * ArrayListName.add(variable); (Adds a new variable to the ArrayList.)
+ *      ArrayListName.add(variable, index); (Adds a new variable to the ArrayList at the specified index.)
+ * 
+ * ArrayListName.get(index); (Returns the variable at the specified index.)
+ * 
+ * ArrayListName.clear(); (Clears array of all variables.)
+ * 
+ * ArrayListName.size(); (Returns the number of variables in the ArrayList.)
+ * 
+ * Collections.shuffle(ArrayListName); (Scrambles location of variables in the ArrayList.)
+ */
 
 public class Quiz{
     Scanner sc = new Scanner(System.in);
