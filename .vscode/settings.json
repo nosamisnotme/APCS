@@ -1,0 +1,15 @@
+{
+    "java.project.sourcePaths": [
+        ".",
+        "Cereal"
+    ],
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar",
+            "Welcome01/lib/sinbad.jar"
+        ],
+        "exclude": [
+            "lib/sinbad.jar"
+        ]
+    }
+}
